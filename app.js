@@ -11,10 +11,12 @@ const app = express();
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const PORT = process.env.PORT || 8000;
-
-// loads stylesheet in public
 const assetsPath = path.join(__dirname, "public");
+
 app.use(express.static(assetsPath));
+
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
 app.use(logger);
 

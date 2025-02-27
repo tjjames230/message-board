@@ -1,9 +1,8 @@
 import { Router } from "express";
+import newMsgController from "../controllers/newMsgController.js";
 
 const newMsg = Router();
 
-newMsg.get("/", (req, res) => {
-	res.send("this is the new message page");
-});
+newMsg.get("/", newMsgController);
 
 export default newMsg;
