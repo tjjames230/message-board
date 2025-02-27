@@ -1,20 +1,8 @@
 import { Router } from "express";
-
-const messages = [
-	{
-		text: "Hi there!",
-		user: "Amando",
-		added: new Date(),
-	},
-	{
-		text: "Hello World!",
-		user: "Charles",
-		added: new Date(),
-	},
-];
+import indexController from "../controllers/indexController.js";
 
 const index = Router();
 
-index.get("/", (req, res) => res.send("this is the home page"));
+index.get("/", indexController);
 
 export default index;
