@@ -12,7 +12,7 @@ const messages = [
 ];
 
 const indexController = (req, res) => {
-	res.render("index", { messages });
+	res.render("index", { title: "mini messageboard", messages: messages });
 };
 
 export default indexController;

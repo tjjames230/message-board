@@ -2,3 +2,25 @@ body {
 	color: red;
 	background-color: black;
 }
+
+ul {
+	padding: 15px;
+}
+
+li {
+	padding: 5px;
+}
+
+a {
+	color: black;
+	background-color: white;
+	border: 1px solid white;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+a:hover {
+	color: white;
+	background-color: black;
+	cursor: pointer;
+}
