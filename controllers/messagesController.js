@@ -5,10 +5,10 @@ const getNewMessage = (req, res) => {
 };
 
 const postNewMessage = (req, res) => {
-	const { msg } = req.body;
+	const { text, user } = req.body;
 	messages.push({
-		text: msg,
-		user: "Charles",
+		text: text,
+		user: user,
 		added: new Date(),
 	});
 	res.redirect("/");
