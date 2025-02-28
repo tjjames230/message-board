@@ -1,14 +1,13 @@
 import { Router } from "express";
-import newMsgController from "../controllers/newMsgController.js";
-import postMsg from "../controllers/postMsg.js";
+import {
+	getNewMessage,
+	postNewMessage,
+} from "../controllers/messagesController.js";
 
 const newMsg = Router();
 
-newMsg.get("/", newMsgController);
-newMsg.post("/", (req, res) => {
-	const msg = req.body.msg;
-	res.send(msg);
-	console.log(msg);
-});
+newMsg.get("/", getNewMessage);
+
+newMsg.post("/", postNewMessage);
 
 export default newMsg;
