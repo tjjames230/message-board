@@ -1,7 +1,7 @@
 const messages = [
 	{
 		text: "Hi there!",
-		user: "Amando",
+		user: "Amanda",
 		added: new Date(),
 	},
 	{
