@@ -10,7 +10,7 @@
 		<h1>HOME PAGE</h1>
 		<ul>
 			<% messages.map(message => { %>
-			<li><%=message.text%><span><%=message.user%></span></li>
+			<li><%=message.text%><span> - <%=message.user%></span></li>
 			<%})%>
 		</ul>
 		<a href="/new" role="button" tabindex="0">Add new message</a>

@@ -6,11 +6,19 @@ const getNewMessage = (req, res) => {
 
 const postNewMessage = (req, res) => {
 	const { text, user } = req.body;
+
+	if (!text || !user) {
+		res.status(422);
+		res.send("please complete both fields");
+		return;
+	}
+
 	messages.push({
 		text: text,
 		user: user,
 		added: new Date(),
 	});
+
 	res.redirect("/");
 };
 
