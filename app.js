@@ -45,5 +45,5 @@ app.use("/", logger, index);
 app.use("/new", newMsg);
 
 app.listen(PORT, () => {
-	console.log(`listening on port ${PORT}`);
+	console.log(`listening on port http://localhost:${PORT}/`);
 });

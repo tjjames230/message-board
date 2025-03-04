@@ -14,6 +14,7 @@ const postNewMessage = (req, res) => {
 	}
 
 	messages.push({
+		id: messages.length + 1,
 		text: text,
 		user: user,
 		added: new Date(),
@@ -22,4 +23,8 @@ const postNewMessage = (req, res) => {
 	res.redirect("/");
 };
 
-export { getNewMessage, postNewMessage };
+const getMessageDetails = (req, res) => {
+	res.render("messageDetails");
+};
+
+export { getNewMessage, postNewMessage, getMessageDetails };
