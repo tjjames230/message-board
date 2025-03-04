@@ -12,7 +12,9 @@
 			<% messages.map(message => { %>
 			<li>
 				<span id="left"><%=message.text%> - <%=message.user%></span>
-				<span id="right"><a href="<%= `/new/${message.id}` %>">Open</a></span>
+				<span id="right"
+					><a class="open" href="<%= `/new/${message.id}` %>">Open</a></span
+				>
 			</li>
 			<%})%>
 		</ul>

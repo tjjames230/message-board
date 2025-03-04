@@ -9,9 +9,13 @@
 	<body>
 		<h1>MESSAGE DETAILS</h1>
 		<ul>
-			<% messages.map(message => { %>
-			<li><%=message.text%><span> - <%=message.user%></span></li>
-			<%})%>
+			<% messages.forEach(message => { if (id == message.id) { %>
+			<div>
+				<h3><%=message.user%></h3>
+				<p><%=message.text%></p>
+				<p><%=message.added%></p>
+			</div>
+			<% }}) %>
 		</ul>
 	</body>
 </html>

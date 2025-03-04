@@ -24,7 +24,10 @@ const postNewMessage = (req, res) => {
 };
 
 const getMessageDetails = (req, res) => {
-	res.render("messageDetails");
+	res.render("messageDetails", {
+		messages: messages,
+		id: req.params.id,
+	});
 };
 
 export { getNewMessage, postNewMessage, getMessageDetails };

@@ -16,6 +16,8 @@ li {
 	padding: 5px;
 	width: 500px;
 	word-wrap: break-word;
+	display: flex;
+	justify-content: space-between;
 }
 
 a {
@@ -35,4 +37,11 @@ a:hover {
 	color: white;
 	background-color: black;
 	cursor: pointer;
+}
+
+.open {
+	padding: 0;
+	color: white;
+	background: none;
+	border: none;
 }
